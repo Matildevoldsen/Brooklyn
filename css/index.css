@@ -25,3 +25,67 @@ body {
   /*Override over*/
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+#about, #films {
+  padding: 30px 50px;
+  width: 100%;
+  background-color: #fff;
+  height: auto;
+  min-height: 150px;
+}
+
+#about .container h1 {
+  font-size: 46px;
+  font-weight: 300;
+}
+
+#about .container h1, #about .container p {
+  text-align: center;
+}
+
+.footer {
+  padding: 30px 50px;
+  width: 100%;
+  background-color: #000;
+  height: auto;
+  color: #fff;
+  text-align: center;
+}
+
+.social-media {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.social-media li {
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+.social-media li a {
+  font-size: 30px;
+}
+
+.social-media li a i {
+  color: #ccc;
+  transition: color 0.4s ease-in;
+}
+
+#facebook i:hover {
+  color: #3b5998;
+}
+
+#twitter i:hover {
+  color: #55acee;
+}
+
+#google i:hover {
+  color: #dd4b39;
+}
+
+#youtube i:hover {
+  color: #ff0000;
+}
