@@ -28,6 +28,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#highlights">Highlights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#films">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reserve">Reservation</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -79,11 +88,11 @@
     <section id="about">
         <div class="container">
             <h1 class="mb-3">Brooklyn Film Festival</h1>
-            <p>This is a film festival going on in Brooklyn</p>
+            <p>This is a film festival going on in Brooklyn from August 5th through 8th from 6pm to midnight.</p>
         </div>
     </section>
 
-    <section class="mt-5">
+    <section class="mt-5" id="highlights">
         <div class="container">
             <h3 class="text-center mb-5">Highlighted Films from the festival</h3>
             <div class="row">
@@ -229,6 +238,57 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="mt-5" id="reserve">
+      <div class="container mb-5">
+        <h3 class="text-center mb-5">Reservations</h3>
+        <form method="POST" action="https://formspree.io/matilde.enevoldsen19@gmail.com">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" name="Full Name" class="form-control" id="name" placeholder="Sofia Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" name="Email" class="form-control" id="email" placeholder="sofia@example.com">
+          </div>
+          <div class="form-group">
+            <label for="number">Number of seats</label>
+            <input type="number" name="Seats" class="form-control" id="number" max="9" min="1" placeholder="# Number of seats"/>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Movie</label>
+            <select name="Film" class="form-control" id="exampleFormControlSelect1">
+              <optgroup label="Day one">
+                <option selected>Deadpool 2</option>
+                <option>Thor Ragnarok</option>
+                <option>Girl Lost</option>
+                <option>Ocean's 8</option>
+              </optgroup>
+              <optgroup label="Day two">
+                <option>Avengers: Infinity War</option>
+                <option>Fifty Shades Freed</option>
+                <option>Star Wars The last Jedi</option>
+                <option>Covet: The Island of Desire</option>
+              </optgroup>
+              <optgroup label="Day Three">
+                <option>Jurassic World: Fallen Kingdom</option>
+                <option>Logan</option>
+                <option>Blade Runner 2049</option>
+                <option>Dawn of the planet of the apes</option>
+              </optgroup>
+              <optgroup label="Day Four">
+                <option>John Wick</option>
+                <option>The Hobbit: the battle of the five armies</option>
+                <option>Game Night</option>
+                <option>Zootopia</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <input name="send" type="submit" class="btn btn-primary" value="Submit"/>
+        </form>
+      </div>
     </section>
 
     <footer class="footer">
