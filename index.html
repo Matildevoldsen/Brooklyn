@@ -38,6 +38,12 @@
                         <a class="nav-link" href="#reserve">Reservation</a>
                     </li>
                 </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact">
+                    Contact Us
+                  </button>
+                </form>
             </div>
         </div>
     </nav>
@@ -294,23 +300,66 @@
     <footer class="footer">
         <ul class="social-media">
             <li>
-                <a id="facebook" href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+                <a id="facebook" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
             </li>
 
             <li>
-                <a id="twitter" href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+                <a id="twitter" href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
             </li>
 
             <li>
-                <a id="google" href="www.google.com"><i class="fa fa-google"></i></a>
+                <a id="google" href="https://www.google.com"><i class="fa fa-google"></i></a>
             </li>
 
             <li>
-                <a id="youtube" href="www.youtube.com"><i class="fa fa-youtube"></i></a>
+                <a id="youtube" href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+            </li>
+
+            <li>
+              <a id="instagram" href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
             </li>
         </ul>
+        <a href="https://www.brooklynbridgepark.org/">Brooklyn Bridge Park's Website</a> | <a href="http://brooklyn.news12.com/">Brooklyn’s news website</a>
         <p>&copy; 2018 Brooklyn Outdoor Film Festival</p>
     </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactus">Contact Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="https://formspree.io/matilde.enevoldsen19@gmail.com" method="post">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" name="Name" placeholder="Sofia Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="Email" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="_subject" placeholder="Sofia Smith">
+          </div>
+          <div class="form-group">
+            <label for="content">Message</label>
+            <textarea class="form-control" id="content" name="Content" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
