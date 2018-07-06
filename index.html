@@ -5,14 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Brooklyn Outdoor Film Festival</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Brooklyn Outdoor Film Festival</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " id="navigation-bar">
+    <!-- Modal -->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactus">Contact Us</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="https://formspree.io/matilde.enevoldsen19@gmail.com" method="post">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Sofia Smith">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="Email" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="_subject" placeholder="Sofia Smith">
+              </div>
+              <div class="form-group">
+                <label for="content">Message</label>
+                <textarea class="form-control" id="content" name="Content" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navigation-bar">
         <!-- Navbar content -->
         <div class="container">
             <a class="navbar-brand" href="#">Brooklyn Film Festival</a>
@@ -21,7 +60,7 @@
         </button>
 
             <div class="collapse navbar-collapse ml-2" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -39,8 +78,8 @@
                     </li>
                 </ul>
 
-                <form class="form-inline my-2 my-lg-0">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contact">
+                <form class="form-inline my-2 my-lg-0 ml-md-4">
+                  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#contact">
                     Contact Us
                   </button>
                 </form>
@@ -100,7 +139,7 @@
 
     <section class="mt-5" id="highlights">
         <div class="container">
-            <h3 class="text-center mb-5">Highlighted Films from the festival</h3>
+            <h3 class="text-center mb-5 pt-5">Highlighted Films from the festival</h3>
             <div class="row">
                 <div class="col-md-4 col-sm-12 mb-3">
                     <div class="card">
@@ -248,55 +287,70 @@
 
     <section class="mt-5" id="reserve">
       <div class="container mb-5">
-        <h3 class="text-center mb-5">Reservations</h3>
-        <form method="POST" action="https://formspree.io/matilde.enevoldsen19@gmail.com">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" name="Full Name" class="form-control" id="name" placeholder="Sofia Smith">
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" name="Email" class="form-control" id="email" placeholder="sofia@example.com">
-          </div>
-          <div class="form-group">
-            <label for="number">Number of seats</label>
-            <input type="number" name="Seats" class="form-control" id="number" max="9" min="1" placeholder="# Number of seats"/>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Select Movie</label>
-            <select name="Film" class="form-control" id="exampleFormControlSelect1">
-              <optgroup label="Day one">
-                <option selected>Deadpool 2</option>
-                <option>Thor Ragnarok</option>
-                <option>Girl Lost</option>
-                <option>Ocean's 8</option>
-              </optgroup>
-              <optgroup label="Day two">
-                <option>Avengers: Infinity War</option>
-                <option>Fifty Shades Freed</option>
-                <option>Star Wars The last Jedi</option>
-                <option>Covet: The Island of Desire</option>
-              </optgroup>
-              <optgroup label="Day Three">
-                <option>Jurassic World: Fallen Kingdom</option>
-                <option>Logan</option>
-                <option>Blade Runner 2049</option>
-                <option>Dawn of the planet of the apes</option>
-              </optgroup>
-              <optgroup label="Day Four">
-                <option>John Wick</option>
-                <option>The Hobbit: the battle of the five armies</option>
-                <option>Game Night</option>
-                <option>Zootopia</option>
-              </optgroup>
-            </select>
-          </div>
+        <h3 class="text-center mb-5 pt-5">Reservations</h3>
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <form method="POST" action="https://formspree.io/matilde.enevoldsen19@gmail.com">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="Full Name" class="form-control" id="name" placeholder="Sofia Smith">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" name="Email" class="form-control" id="email" placeholder="sofia@example.com">
+              </div>
+              <div class="form-group">
+                <label for="number">Number of seats</label>
+                <input type="number" name="Seats" class="form-control" id="number" max="9" min="1" placeholder="# Number of seats"/>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Select Movie</label>
+                <select name="Film" class="form-control" id="exampleFormControlSelect1">
+                  <optgroup label="Day one">
+                    <option selected>Deadpool 2</option>
+                    <option>Thor Ragnarok</option>
+                    <option>Girl Lost</option>
+                    <option>Ocean's 8</option>
+                  </optgroup>
+                  <optgroup label="Day two">
+                    <option>Avengers: Infinity War</option>
+                    <option>Fifty Shades Freed</option>
+                    <option>Star Wars The last Jedi</option>
+                    <option>Covet: The Island of Desire</option>
+                  </optgroup>
+                  <optgroup label="Day Three">
+                    <option>Jurassic World: Fallen Kingdom</option>
+                    <option>Logan</option>
+                    <option>Blade Runner 2049</option>
+                    <option>Dawn of the planet of the apes</option>
+                  </optgroup>
+                  <optgroup label="Day Four">
+                    <option>John Wick</option>
+                    <option>The Hobbit: the battle of the five armies</option>
+                    <option>Game Night</option>
+                    <option>Zootopia</option>
+                  </optgroup>
+                </select>
+              </div>
 
-          <input name="send" type="submit" class="btn btn-primary" value="Submit"/>
-        </form>
+              <input name="send" type="submit" class="btn btn-primary mb-5" value="Submit"/>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
-
+    <section id="news" class="bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 my-auto">
+            <img src="img/twitter.jpg" class="img-fluid" alt="A bird holding a megaphone"/>
+          </div>
+          <div class="col-6">
+            <a class="twitter-timeline" data-lang="en" data-height="500" href="https://twitter.com/AAFilmFest?ref_src=twsrc%5Etfw">Tweets by AAFilmFest</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
         <ul class="social-media">
             <li>
@@ -322,53 +376,27 @@
         <a href="https://www.brooklynbridgepark.org/">Brooklyn Bridge Park's Website</a> | <a href="http://brooklyn.news12.com/">Brooklyn’s news website</a>
         <p>&copy; 2018 Brooklyn Outdoor Film Festival</p>
     </footer>
-
-<!-- Modal -->
-<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="contactus">Contact Us</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="https://formspree.io/matilde.enevoldsen19@gmail.com" method="post">
-        <div class="modal-body">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" class="form-control" id="name" name="Name" placeholder="Sofia Smith">
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="Email" placeholder="name@example.com">
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" class="form-control" id="subject" name="_subject" placeholder="Sofia Smith">
-          </div>
-          <div class="form-group">
-            <label for="content">Message</label>
-            <textarea class="form-control" id="content" name="Content" rows="3"></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <input type="submit" class="btn btn-primary" value="Submit">
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <script src="js/index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js?ver=1.4.1'></script>
     <script type="text/javascript">
-        $('#myTab a').on('click', function (e) {
-          e.preventDefault()
-          $(this).tab('show')
+        jQuery(function($){
+          jQuery('#myTab a').on('click', function (e) {
+            e.preventDefault()
+            jQuery(this).tab('show')
+          })
+          // Smooth Scrolling: Smooth scrolls to an ID on the current page.
+          // To use this feature, add a link on your page that links to an ID, and add the .page-scroll class to the link itself. See the docs for more details.
+          jQuery('#navigation-bar .nav-link').bind('click', function(event) {
+              var $anchor = jQuery(this);
+              jQuery('html, body').stop().animate({
+                  scrollTop: (jQuery($anchor.attr('href')).offset().top - 55)
+              }, 800, 'easeInOutExpo');
+              event.preventDefault();
+          });
         })
     </script>
 </body>
